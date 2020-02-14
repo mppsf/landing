@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" >
+  <title>Farmation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="logo" class="logo">
+    <ul class="header-menu">
+      <li class="header-menu__item"><a class="tel-link" href="tel:+79281234567">+7 928 123 45 67</a></li>
+      <li class="header-menu__item"><button onclick="call_order_modal()" class="call-order">заказать звонок</button></li>
+      <li class="header-menu__item"><button onclick="enter_modal()" class="sign-in">вход/регистрация</button></li>
+    </ul>
+  </header>
+  <main>
+    <div id="enter-modal" class="enter-modal modal">
+      <span class="modal__heading">Авторизация</span class="modal__heading">
+      <input placeholder="Ваше имя" type="text" class="modal__input">
+      <input placeholder="Пароль" type="password" class="modal__input">
+      <input id="modal-remember" type="checkbox">
+      <label for="modal-remember" class="enter-modal__remember-label">Запомнить меня</label>
+      <a href="" class="enter-modal__loss-password">Забыли пароль?</a>
+      <button class="enter-modal__sign-in">Войти</button>
+      <button class="enter-modal__sign-up">Зарегистрироваться</button>
+      <span class="close-modal" onclick="close_modal()">&#9587</span>
+    </div>
+    <div id="call-order-modal" class="call-order-modal modal">
+      <span class="modal__heading">Заказать звонок</span class="modal__heading">
+      <span class="call-order-modal__text">Заполните простую форму и мы перезвоним Вам в ближайшее время</span>
+      <input placeholder="Ваше имя" type="text" class="modal__input">
+      <input placeholder="Телефон" type="text" class="modal__input">
+      <button onclick="call_send_modal()" class="call-order-modal__call-order">Заказать звонок</button>
+      <span class="close-modal" onclick="close_modal()">&#9587</span>
+    </div>
+    <div id="call-send-modal" class="call-send-modal modal">
+      <span class="modal__heading">Заказ принят</span class="modal__heading">
+      <span class="call-send-modal__text">Наши специалисты свяжутся с Вами в ближайшее время</span>
+      <span class="close-modal" onclick="close_modal()">&#9587</span>
+    </div>
+    <section class="about-section">
+      <div class="about-heading">
+      <p class="about-heading__text">Единственная в России платформа <br> для сбора и интерактивной работы со знаниями </p>
+      <h1 class="about-heading__heading">Больше знаний</h1>
+      </div>
+      <span class="about__scroll">Скрольте вниз</span>
+      <div class="about-platform">
+        <h2 class="about-platform__heading">О платформе</h2>
+        <p class="about-platform__text">Farmation – единственнаяв России платформа для концентрации инновационных знаний
+          в области сельского хозяйства, а так же для интерактивной работы с ними. Наша задача – собрать множество
+          экспертов и участников отрасли для их прямого взаимодействия и обмена опытом.</p>
+        <p class="about-platform__text--subtext">
+          Наша цель – сделать знания и экспертизу максимально доступными для каждого представителя сельскохозяйственной
+          отрасли.
+        </p>
+        <img class="left-img" src="img/about-img.jpg" alt="img">
+      </div>
+      <div class="how">
+        <h3 class="how__heading">как мы это делаем?</h3>
+        <ul class="how-list">
+          <li class="how-list-item">
+            <h4 class="how-list-item__heading">Через мероприятия</h4>
+            <p class="how-list-item__text"> Добавляем интерактив в отраслевые мероприятия и собираем доступные материалы в нашей платформе. Делаем
+              доступным для посещения любое отраслевое мероприятие из любой точки мира как в онлайн, так и в офф-лайн
+              режиме.
+            </p>
+          </li>
+          <li class="how-list-item">
+            <h4 class="how-list-item__heading">Через материалы от экспертов отрасли</h4>
+            <p class="how-list-item__text"> Мы предоставляем Farmation экспертам и вендорам для того, чтобы они могли поделиться своими знаниями с
+              любыми представителями отрасли с помощью размещения презентаций, статей и видео.
+            </p>
+          </li>
+          <li class="how-list-item">
+            <h4 class="how-list-item__heading">Через общение с экспертами отрасли</h4>
+            <p class="how-list-item__text">Farmation даёт всем представителям сельского хозяйства общаться с отраслевыми экспертами напрямую:
+              задавать вопросы на мероприятии, задавать вопросы после мероприятия, обсуждать новые материалы, которыми
+              делятся эксперты, а так же давать им оценку.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="opportunities">
+      <h2 class="opportunities-heading">Возможности платформы</h2>
+      <div class="for-organizers">
+        <h3 class="for-organizers__heading">Для организаторов отраслевых мероприятий</h3>
+        <p class="for-organizers__text">Предоставьте каждому участнику мероприятия возможность еще больше быть
+          вовлеченным в него: смотреть
+          презентации у себя на мобильном устройстве, задавать вопросы спикеру, проходить опросы, общаться со спикерами
+          и смотреть контент даже после мероприятий.
+        </p>
+        <span class="for-organizers__list-heading">Основные возможности интерактивной платформы Farmation для мероприятий:</span>
+        <ul class="for-organizers__list">
+          <li class="for-organizers__list-item">синхронная трансляция слайдов</li>
+          <li class="for-organizers__list-item">вопросы спикеру из зала</li>
+          <li class="for-organizers__list-item">опросы и тесты </li>
+          <li class="for-organizers__list-item">расписание мероприятий</li>
+          <li class="for-organizers__list-item">информация о спикере и о его выступлениях</li>
+        </ul>
+        <img class="right-img" src="img/img-2.jpg" alt="img">
+      </div>
+      <div class="for-experts">
+        <img class="left-img opportunities-img" src="img/left-img-2.jpg" alt="img">
+        <ul class="for-experts__list">
+        <li class="for-experts__list-item">
+          <h3 class="for-experts__list-item-heading">Для экспертов и вендоров</h3>
+          <p class="for-experts__list-item-text"> Зарегистрируйтесь в качестве эксперта и делитесь материалами со всеми представителями сельского хозяйства!
+            Получайте обратную связь и вопросы по своему контенту, взаимодействуйте со своей аудиторией, отвечайте на их
+            вопросы, приглашайте их на свои мероприятия
+          </p>
+        </li>
+        <li class="for-experts__list-item">
+          <h3 class="for-experts__list-item-heading">Для всех представителей сельского хозяйства</h3>
+          <p class="for-experts__list-item-text"> Зарегистрируйтесь в Farmation и получите доступ к постоянно пополняемой отраслевыми материалами базе знаний.
+            Задавайте вопросы и подписывайтесь на экспертов и вендоров, получайте информацию о новых отраслевых
+            мероприятиях. Делитесь материалами со своими коллегами и соратниками!
+          </p>
+        </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="contacts">
+    <h2 class="contacts__heading footer-heading"> Контакты </h2>
+    <span class="contacts__text">Телефон: </span>
+    <a href="tel:88001000259" class="contacts__tel">8 800 1000 259</a>
+    <button onclick="call_order_modal()" class="call-order">Заказать звонок</button>
+    <span class="contacts__text contacts__text--email">E-mail: </span>
+    <a href="mailto:info@fommation.com" class="contacts__email">info@fommation.com</a>
+    <button onclick="enter_modal()" class="contacts__join">Присоединиться</button>
+    </div>
+    <form class="feedback-form" action="">
+      <h2 class="feedback__heading">Обратная связь</h2>
+      <input type="text" placeholder="Ваше имя" class="feedback__input">
+      <textarea placeholder="Сообщение" class="feedback__input--message"></textarea>
+      <input type="text" placeholder="Телефон" class="feedback__input feedback__input--tel">
+      <button class="feedback__send" type="submit">Отправить</button>
+    </form>
+    <span class="footer__copyright">© 2019 Farmation. Все права защищены.</span>
+    <img class="footer__logo" src="img/logo.png" alt="logo">
+  </footer>
+  <script src="modal.js"></script>
+</body>
+</html>
